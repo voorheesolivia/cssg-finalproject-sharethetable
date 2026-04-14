@@ -57,39 +57,7 @@
 
 </section>
 
-<script>
-function signUp() {
-  const user = document.getElementById("username").value;
-  const pass = document.getElementById("password").value;
-
-  if (!user || !pass) {
-    document.getElementById("message").innerText = "Fill in all fields";
-    return;
-  }
-
-  if (localStorage.getItem("user_" + user)) {
-    document.getElementById("message").innerText = "Account already exists";
-    return;
-  }
-
-  localStorage.setItem("user_" + user, pass);
-  document.getElementById("message").innerText = "Account created";
-}
-
-function signIn() {
-  const user = document.getElementById("username").value;
-  const pass = document.getElementById("password").value;
-
-  const stored = localStorage.getItem("user_" + user);
-
-  if (stored === pass) {
-    localStorage.setItem("loggedInUser", user);
-    window.location.href = "calendar.html";
-  } else {
-    document.getElementById("message").innerText = "Invalid login";
-  }
-}
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

@@ -39,66 +39,41 @@
 
 <div class="calendar-grid">
 
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
 
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
 
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
 
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
-  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
+  <div class="mybox">Open Shift</div>
 
 </div>
 
-<script>
-const user = localStorage.getItem("loggedInUser");
-
-if (!user) {
-  window.location.href = "volunteers.html";
-}
-
-document.querySelectorAll(".mybox").forEach(box => {
-  box.addEventListener("click", () => {
-
-    if (!box.classList.contains("booked")) {
-      box.classList.add("booked");
-      box.dataset.user = user;
-      box.innerHTML = "Booked by<br>" + user;
-    } else {
-
-      if (box.dataset.user === user) {
-        box.classList.remove("booked");
-        box.dataset.user = "";
-        box.innerHTML = "Open Shift";
-      }
-    }
-
-  });
-});
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

@@ -67,40 +67,7 @@
 
 </section>
 
-<script>
-  let cart = [];
-
-  function addToCart(name, price) {
-    cart.push({ name, price });
-    updateCart();
-  }
-
-  function removeFromCart(index) {
-    cart.splice(index, 1);
-    updateCart();
-  }
-
-  function updateCart() {
-    const list = document.getElementById("cart-list");
-    const totalDisplay = document.getElementById("total");
-
-    list.innerHTML = "";
-    let total = 0;
-
-    cart.forEach((item, index) => {
-      total += item.price;
-
-      const li = document.createElement("li");
-      li.innerHTML = `
-        ${item.name} - $${item.price}
-        <button class="button" onclick="removeFromCart(${index})">Remove</button>
-      `;
-      list.appendChild(li);
-    });
-
-    totalDisplay.textContent = "Total: $" + total;
-  }
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
