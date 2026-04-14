@@ -1,0 +1,279 @@
+.topnavbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  background-color: white;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+.nav-center {
+  display: flex;
+  gap: 10px;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  height: 50px;
+}
+
+body{
+  font-family: 'Hanuman', Georgia, serif;
+  background-color: #DC244A;
+  margin: 0;
+}
+
+.bottom-info{
+    background-color: #DC244A;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.bottom-info p{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.service{
+    width: 200px;
+}
+
+.posts{
+    width: 200px;
+}
+
+.contact{
+    width: 200px;
+}
+
+.topnavbar a{
+  padding: 10px 10px;
+  margin: 5px;
+  border-radius: 20px;
+  text-decoration: none; 
+  color: black;
+  font-size: 25px;
+}
+
+.topnavbar a:hover{
+  background-color: #F2F0F0;
+  color: #96C33A;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #8A38F5;
+  color: white;
+  width: 100%;
+}
+
+.food-pantry .times{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+}
+
+.info .introduction{
+  padding: 10px 50px;
+}
+
+.info .food-pantry{
+  padding: 10px 50px;
+}
+
+.info .munch{
+  padding: 10px 50px;
+}
+
+.info .community-meal{
+  padding: 10px 50px;
+}
+
+h2{
+    text-shadow: 2px 2px 5px black;
+}
+
+p{
+    text-shadow:2px 2px 5px #404040;
+}
+
+.times{
+    text-shadow:2px 2px 5px #404040;
+}
+
+.calendar{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    background: white;
+    border: 1px solid black;
+}
+
+.mybox{
+    border: 1px solid black;
+    padding: 20px;
+    background: white;
+    margin: 0px 10px 0px 10px;
+}
+
+.weeks{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.volunteer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 10px;
+}
+
+.volunteer-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  width: 90%;
+  max-width: 900px;
+}
+
+.vol-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.vol-img:hover {
+  transform: scale(1.03);
+}
+
+.sign-up-box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.info {
+  background-color: #8A38F5;
+  background-image: linear-gradient(to bottom, #8A38F5, #6f2fd6);
+}
+
+.sign-up-box .box-entry {
+  margin: 10px 0;
+}
+
+.sign-up-box .button {
+  margin: 10px 0;
+}
+
+.sign-up-box p {
+  margin-top: 12px;
+}
+
+.sign-up-box .title h2 {
+  color: black;
+  text-shadow: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 18px;
+  background: #96C33A;
+  color: white;
+  font-family: 'Hanuman', Georgia, serif;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: #7FAF2D;
+  cursor: pointer;
+}
+
+.button:active {
+  background: #5A8F1F;
+}
+
+.button:focus {
+  outline: 2px solid black;
+}
+
+.bottom-info {
+  justify-content: center;
+  gap: 120px;
+  text-align: center;
+  color: white;
+}
+
+.intro-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.intro-circle {
+  width: 300px;
+  height: 300px;
+  background-color: #DC244A;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.intro-circle h2 {
+  font-size: 24px;
+  margin: 6px 0;
+  font-weight: 700;
+}
+
+.intro-circle p {
+  font-size: 13px;
+  line-height: 1.3;
+  margin: 10px 0;
+}
+
+.intro-image-box {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.intro-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-image:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}

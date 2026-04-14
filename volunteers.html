@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Portal</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=BJ+Cree:wght@400;500;600;700&family=Hanuman:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="topnavbar">
+
+  <img src="images/logo/main-logo.png" class="logo">
+
+  <div class="nav-center">
+    <a href="index.html">HOME</a>
+    <a href="volunteers.html">VOLUNTEERS</a>
+    <a href="donate.html">DONATE</a>
+  </div>
+
+</div>
+
+<section class="info">
+
+  <div class="volunteer-wrapper">
+
+    <div class="volunteer-gallery">
+
+      <img src="images/volunteers/v1.png" class="vol-img">
+      <img src="images/volunteers/v2.png" class="vol-img">
+      <img src="images/volunteers/v3.png" class="vol-img">
+      <img src="images/volunteers/v4.png" class="vol-img">
+
+    </div>
+
+    <div class="sign-up-box">
+
+      <div class="title">
+        <h2>Volunteer Login</h2>
+      </div>
+
+      <input id="username" class="box-entry" placeholder="Username">
+      <input id="password" class="box-entry" type="password" placeholder="Password">
+
+      <div class="button" onclick="signUp()">Create Account</div>
+      <div class="button" onclick="signIn()">Sign In</div>
+
+      <p id="message"></p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+function signUp() {
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+
+  if (!user || !pass) {
+    document.getElementById("message").innerText = "Fill in all fields";
+    return;
+  }
+
+  if (localStorage.getItem("user_" + user)) {
+    document.getElementById("message").innerText = "Account already exists";
+    return;
+  }
+
+  localStorage.setItem("user_" + user, pass);
+  document.getElementById("message").innerText = "Account created";
+}
+
+function signIn() {
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+
+  const stored = localStorage.getItem("user_" + user);
+
+  if (stored === pass) {
+    localStorage.setItem("loggedInUser", user);
+    window.location.href = "calendar.html";
+  } else {
+    document.getElementById("message").innerText = "Invalid login";
+  }
+}
+</script>
+
+</body>
+</html>

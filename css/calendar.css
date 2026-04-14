@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: 'Hanuman', Georgia, serif;
+  background-color: #DC244A;
+}
+
+.topnavbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  background-color: white;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+.nav-center {
+  display: flex;
+  gap: 10px;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  height: 50px;
+}
+
+.nav-center a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+
+.nav-center a:hover {
+  background-color: #F2F0F0;
+  color: #96C33A;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.user-bar {
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  padding: 20px;
+}
+
+.mybox {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.mybox:hover {
+  transform: scale(1.03);
+  background: #f2f2f2;
+}
+
+.mybox.booked {
+  background: #96C33A;
+  color: white;
+  transform: none;
+}
+
+.button {
+  font-family: 'Hanuman', Georgia, serif;
+}

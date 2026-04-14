@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate - Share the Table NC</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/donate.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="topnavbar">
+
+  <img src="images/logo/main-logo.png" class="logo">
+
+  <div class="nav-center">
+    <a href="index.html">HOME</a>
+    <a href="volunteers.html">VOLUNTEERS</a>
+    <a href="donate.html">DONATE</a>
+  </div>
+
+</div>
+
+<section class="donate-page">
+
+  <h1>Most Needed Items</h1>
+
+  <div class="items-grid">
+
+    <div class="item-card">
+      <img src="images/donate-items/Canned Goods.png" class="item-image">
+      <h3>Canned Goods</h3>
+      <p>$5</p>
+      <button class="button" onclick="addToCart('Canned Goods', 5)">Add to Cart</button>
+    </div>
+
+    <div class="item-card">
+      <img src="images/donate-items/Fresh Vegetables.png" class="item-image">
+      <h3>Fresh Vegetables</h3>
+      <p>$8</p>
+      <button class="button" onclick="addToCart('Fresh Vegetables', 8)">Add to Cart</button>
+    </div>
+
+    <div class="item-card">
+      <img src="images/donate-items/Baby Food.png" class="item-image">
+      <h3>Baby Food</h3>
+      <p>$6</p>
+      <button class="button" onclick="addToCart('Baby Food', 6)">Add to Cart</button>
+    </div>
+
+    <div class="item-card">
+      <img src="images/donate-items/Hygiene Products.png" class="item-image">
+      <h3>Hygiene Products</h3>
+      <p>$10</p>
+      <button class="button" onclick="addToCart('Hygiene Products', 10)">Add to Cart</button>
+    </div>
+
+  </div>
+
+  <div class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-list"></ul>
+    <h3 id="total">Total: $0</h3>
+  </div>
+
+</section>
+
+<script>
+  let cart = [];
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    updateCart();
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+  }
+
+  function updateCart() {
+    const list = document.getElementById("cart-list");
+    const totalDisplay = document.getElementById("total");
+
+    list.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      total += item.price;
+
+      const li = document.createElement("li");
+      li.innerHTML = `
+        ${item.name} - $${item.price}
+        <button class="button" onclick="removeFromCart(${index})">Remove</button>
+      `;
+      list.appendChild(li);
+    });
+
+    totalDisplay.textContent = "Total: $" + total;
+  }
+</script>
+
+</body>
+</html>

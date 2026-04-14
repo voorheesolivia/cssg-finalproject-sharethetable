@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Scheduling</title>
+
+  <link rel="stylesheet" href="css/calendar.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="topnavbar">
+
+  <img src="images/logo/main-logo.png" class="logo">
+  <div class="nav-center">
+    <a href="index.html">HOME</a>
+    <a href="volunteers.html">VOLUNTEERS</a>
+    <a href="donate.html">DONATE</a>
+  </div>
+</div>
+
+<div class="user-bar">
+  <p id="welcome"></p>
+</div>
+
+<h1 class="title">Volunteer Calendar</h1>
+
+<div class="calendar-header">
+  <div>Sunday</div>
+  <div>Monday</div>
+  <div>Tuesday</div>
+  <div>Wednesday</div>
+  <div>Thursday</div>
+  <div>Friday</div>
+  <div>Saturday</div>
+</div>
+
+<div class="calendar-grid">
+
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+  <div class="mybox" onclick="bookShift(this)">Open Shift</div>
+
+</div>
+
+<script>
+const user = localStorage.getItem("loggedInUser");
+
+if (!user) {
+  window.location.href = "volunteers.html";
+}
+
+document.querySelectorAll(".mybox").forEach(box => {
+  box.addEventListener("click", () => {
+
+    if (!box.classList.contains("booked")) {
+      box.classList.add("booked");
+      box.dataset.user = user;
+      box.innerHTML = "Booked by<br>" + user;
+    } else {
+
+      if (box.dataset.user === user) {
+        box.classList.remove("booked");
+        box.dataset.user = "";
+        box.innerHTML = "Open Shift";
+      }
+    }
+
+  });
+});
+</script>
+
+</body>
+</html>

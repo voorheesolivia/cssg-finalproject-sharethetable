@@ -1,0 +1,93 @@
+.donate-page {
+  text-align: center;
+  background-color: #8A38F5;
+  color: white;
+  padding: 20px;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.item-card {
+  background-color: white;
+  color: black;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+  box-shadow: none;
+}
+
+.item-card:hover {
+  transform: scale(1.05);
+}
+
+.item-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.cart {
+  background-color: white;
+  color: black;
+  margin: 30px auto;
+  padding: 20px;
+  width: 350px;
+  border-radius: 20px;
+}
+
+.cart li {
+  margin: 10px 0;
+}
+
+.cart button {
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #DC244A;
+  color: white;
+  cursor: pointer;
+}
+
+p{
+    text-shadow: none;
+}
+
+h2{
+    text-shadow: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 18px;
+  border: none;
+  background: #96C33A;
+  color: white;
+  font-family: 'Hanuman', Georgia, serif;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: #7FAF2D;
+  cursor: pointer;
+  border: none;
+}
+
+.button:active {
+  background: #5A8F1F;
+  border: none;
+}
+
+.button:focus {
+  outline: 2px solid black;
+  border: none;
+}

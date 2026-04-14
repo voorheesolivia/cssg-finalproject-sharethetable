@@ -1,0 +1,126 @@
+.topnavbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  background-color: white;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+.nav-center {
+  display: flex;
+  gap: 10px;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  height: 50px;
+}
+
+.topnavbar a{
+  padding: 10px 10px;
+  margin: 5px;
+  border-radius: 20px;
+  text-decoration: none; 
+  color: black;
+  font-size: 25px;
+}
+
+.topnavbar a:hover{
+  background-color: #F2F0F0;
+  color: #96C33A;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+body{
+  font-family: 'Hanuman', Georgia, serif;
+  background-color: #DC244A;
+  margin: 0;
+}
+
+.box-entry{
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: white;
+  padding: 10px;
+  margin: 0px 0px 10px 0px;
+  width: 200px;
+}
+
+.sign-up-box{
+  background-color: white;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  width: 400px;
+  margin: 50px auto;
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 0px 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin{
+  text-decoration: underline;
+  padding: 10px;
+}
+
+.signin:hover{
+  cursor: pointer;
+  background-color: #F2F0F0;
+  color: #96C33A;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.reenter .box-entry{
+  margin: 0px 0px 20px 0px;
+}
+
+.volunteers-page .login-box {
+  width: 350px;
+  margin: 80px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.volunteers-page .box {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.volunteers-page .login-box button {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(to right, #96C33A, #5A8F1F);
+  color: white;
+}
+
+.volunteers-page .login-box button:hover {
+  opacity: 0.9;
+}
+
+.volunteers-page #message {
+  margin-top: 10px;
+}
+
+.button {
+  font-family: 'Hanuman', Georgia, serif;
+}
