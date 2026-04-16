@@ -7,6 +7,16 @@
 }
 
 body{
+    background-color: #DC244A;
+}
+
+.background-color{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     background-color: white;
 }
 
+.header{
+    color: #8A38F5;
+}
