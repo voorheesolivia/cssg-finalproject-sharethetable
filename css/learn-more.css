@@ -1,0 +1,12 @@
+.header h2{
+    text-shadow: none;
+}
+
+.about-info p, h5{
+    text-shadow: none;
+}
+
+body{
+    background-color: white;
+}
+
